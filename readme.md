@@ -17,3 +17,19 @@ You can now call `Install-Vencord` to run the latest vencord installer.
 ```ps
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install.ps1'))} global"
 ```
+
+## GUI installer
+Use the above steps, but with `install-vencord-gui.cmd` and `vencord-install-gui.ps1`, for example:
+```ps
+function InstallVencordGui {
+    Set-ExecutionPolicy Bypass -Scope Process -Force;
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+    iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-gui.ps1'))} global"
+}
+
+New-Alias install-vencord InstallVencordGui
+```
+and for running manually:
+```ps
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-gui.ps1'))} global"
+```
