@@ -8,10 +8,9 @@ function InstallVencord {
     Set-ExecutionPolicy Bypass -Scope Process -Force;
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
     iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install.ps1'))} global"
-
+}
 
 New-Alias install-vencord InstallVencord
-}
 ```
 You can now call `Install-Vencord` to run the latest vencord installer.
 # Run Manually
