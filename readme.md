@@ -28,7 +28,7 @@ function InstallVencordGui {
     iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-gui.ps1'))} global"
 }
 
-New-Alias install-vencord-gui InstallVencordGui
+New-Alias install-vencord InstallVencordGui
 ```
 and for running manually:
 ```ps
