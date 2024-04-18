@@ -1,6 +1,7 @@
 # Installation
 ## Batch Script
 Place the `install-vencord.cmd` file into your CLI's startup directory (usually $HOME)
+Following that, you can now run `> install-vencord` in CMD
 ## Powershell Alias
 Put the following into your powershell profile (run `notepad $profile` to edit your current profile):
 ```ps
@@ -27,7 +28,7 @@ function InstallVencordGui {
     iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-gui.ps1'))} global"
 }
 
-New-Alias install-vencord InstallVencordGui
+New-Alias install-vencord-gui InstallVencordGui
 ```
 and for running manually:
 ```ps
