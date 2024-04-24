@@ -7,6 +7,6 @@ Else
 {
     & ".\VencordInstallerCli.exe" "--update-self";
 }
-& ".\VencordInstallerCli.exe" "--branch" "stable" "--install-openasar";
-& ".\VencordInstallerCli.exe" "--branch" "stable" "--install";
+& ".\VencordInstallerCli.exe" "--branch" "ptb" "--install-openasar";
+& ".\VencordInstallerCli.exe" "--branch" "ptb" "--install";
 Pop-Location

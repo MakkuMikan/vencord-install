@@ -1,3 +1,24 @@
+# Update
+You can now add `-stable`, `-ptb` and `-canary` to each version of the following instructions to automatically install vencord onto those specific versions of Discord.
+### Example (for Discord Stable)
+The batch script file is `install-vencord-stable.cmd`
+
+Put the following into your powershell profile (run `notepad $profile` to edit your current profile):
+```ps
+function InstallVencordStable {
+    Set-ExecutionPolicy Bypass -Scope Process -Force;
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+    iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-stable.ps1'))} global"
+}
+
+New-Alias install-vencord InstallVencordStable
+```
+
+...and to run manually:
+```ps
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex "&{$((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/MakkuMikan/vencord-install/main/vencord-install-stable.ps1'))} global"
+```
+
 # Installation
 ## Batch Script
 Place the `install-vencord.cmd` file into your CLI's startup directory (usually $HOME)

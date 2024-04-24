@@ -5,8 +5,8 @@ If (!(Test-Path ".\VencordInstallerCli.exe"))
 }
 Else
 {
-    & ".\VencordInstallerCli.exe --update-self";
+    & ".\VencordInstallerCli.exe" "--update-self";
 }
-& ".\VencordInstallerCli.exe --branch stable --install-openasar";
-& ".\VencordInstallerCli.exe --branch stable --install";
+& ".\VencordInstallerCli.exe" "--branch" "canary" "--install-openasar";
+& ".\VencordInstallerCli.exe" "--branch" "canary" "--install";
 Pop-Location
